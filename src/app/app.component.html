@@ -1,0 +1,32 @@
+<div class="container">
+  <!-- <div class="row">
+    <table *ngIf="!esconder" class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <td>Nome</td>
+          <td>Idade</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pessoa of pessoas">
+          <td>{{pessoa.nome}}</td>
+          <td>{{pessoa.idade}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
+
+  <app-pessoa-cadastro (pessoaAdicionada)="onAdicionarPessoa($event)"></app-pessoa-cadastro>
+
+
+  <div class="row">
+    <div class="col-4" *ngFor="let p of pessoas">
+      <app-pessoa-cartao [pessoa]="p"></app-pessoa-cartao>
+    </div>
+  </div>
+
+  <!-- <div class="row">
+    <button class="btn btn-primary btn-block mt-3" (click)="alterarExibicao()">{{textoBotao}}</button>
+  </div> -->
+
+</div>
